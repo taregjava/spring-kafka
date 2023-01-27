@@ -13,7 +13,11 @@ public class KafkaTopicConfig {
         return TopicBuilder.name("halfacode")
                 .build();
     }
-
+    @Bean
+    public NewTopic halfacodeJsonTopics(){
+        return TopicBuilder.name("halfacode-json")
+                .build();
+    }
 }
 
 

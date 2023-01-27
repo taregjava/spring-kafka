@@ -25,7 +25,7 @@ public class JsonKafkaProducer {
         LOGGER.info(String.format("Message Sent -> %s",data.toString()));
         Message<User> message = MessageBuilder
                 .withPayload(data)
-                .setHeader(KafkaHeaders.TOPIC, "halfacode")
+                .setHeader(KafkaHeaders.TOPIC, "halfacodeJsonTopics")
                 .build();
         kafkaTemplate.send(message);
     }
